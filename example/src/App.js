@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Form from './Components/Form';
+import TableFrag from './Components/FragmentDemo';
+//import Form from './Components/Form';
 //import './appStyles.css'
 //import styles from './appStyles.module.css'
 //import Inline from './Components/Inline';
@@ -20,7 +21,8 @@ class App extends Component {
 render() {
   return (
     <div className="App">
-      <Form />
+      <TableFrag/>
+      {/*<Form />*/}
       {/*<h1 className='yes'>okay</h1>*/}
       {/*<h1 className={styles.no}>not okay</h1>*/}
       {/*<Inline />*/}      
