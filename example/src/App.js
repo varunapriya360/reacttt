@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import TableFrag from './Components/FragmentDemo';
+import TableFrag from './Components/TableFrag'
 //import Form from './Components/Form';
 //import './appStyles.css'
 //import styles from './appStyles.module.css'

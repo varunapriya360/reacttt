@@ -1,5 +1,5 @@
 import React from 'react'
-import ColFrag from '../ColFrag'
+import ColFrag from './ColFrag'
 
 function TableFrag() {
   return (
