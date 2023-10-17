@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import TableFrag from './Components/TableFrag'
+import FRparent from './Components/FRparent';
+//import RefsDemo from './Components/RefsDemo';
+//import ParentRef from './Components/ParentRef';
+//import TableFrag from './Components/TableFrag'
 //import Form from './Components/Form';
 //import './appStyles.css'
 //import styles from './appStyles.module.css'
@@ -21,7 +24,11 @@ class App extends Component {
 render() {
   return (
     <div className="App">
-      <TableFrag/>
+      <FRparent/>
+      {/*<ParentRef/>*/}
+      {/*<RefsDemo/>*/}
+      {/*<FRparent />*/}
+      {/*<TableFrag/>*/}
       {/*<Form />*/}
       {/*<h1 className='yes'>okay</h1>*/}
       {/*<h1 className={styles.no}>not okay</h1>*/}
