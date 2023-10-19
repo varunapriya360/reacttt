@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import FRparent from './Components/FRparent';
+//import StudentList from './Components/StudentList';
+//import ErrorBoundary from './Components/ErrorBoundary';
+//import PortalDemo from './Components/PortalDemo';
+//import FRparent from './Components/FRparent';
 //import RefsDemo from './Components/RefsDemo';
 //import ParentRef from './Components/ParentRef';
 //import TableFrag from './Components/TableFrag'
@@ -24,7 +27,17 @@ class App extends Component {
 render() {
   return (
     <div className="App">
-      <FRparent/>
+      {/*<ErrorBoundary>
+        <StudentList sName='varuna' />
+      </ErrorBoundary>
+      <ErrorBoundary>
+      <StudentList sName='varsha' />
+      </ErrorBoundary>
+      <ErrorBoundary>
+      <StudentList sName='ananya' />
+  </ErrorBoundary>*/}
+      {/*<PortalDemo />*/}
+      {/*<FRparent/>*/}
       {/*<ParentRef/>*/}
       {/*<RefsDemo/>*/}
       {/*<FRparent />*/}
