@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import ClickCounter from './Components/ClickCounter';
+import HoverCounter from './Components/HoverCounter';
 //import StudentList from './Components/StudentList';
 //import ErrorBoundary from './Components/ErrorBoundary';
 //import PortalDemo from './Components/PortalDemo';
@@ -27,6 +29,8 @@ class App extends Component {
 render() {
   return (
     <div className="App">
+      <ClickCounter />
+      <HoverCounter name='varuna'/>
       {/*<ErrorBoundary>
         <StudentList sName='varuna' />
       </ErrorBoundary>
