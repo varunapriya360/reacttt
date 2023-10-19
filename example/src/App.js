@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import ClickCounter from './Components/ClickCounter';
-import HoverCounter from './Components/HoverCounter';
+import ClickCounterTwo from './Components/ClickCounterTwo';
+import HoverCounterTwo from './Components/HoverCounterTwo';
+//import User from './Components/User';
+import CounterTwo from './Components/CounterTwo';
+//import ClickCounter from './Components/ClickCounter';
+//import HoverCounter from './Components/HoverCounter';
 //import StudentList from './Components/StudentList';
 //import ErrorBoundary from './Components/ErrorBoundary';
 //import PortalDemo from './Components/PortalDemo';
@@ -29,8 +33,17 @@ class App extends Component {
 render() {
   return (
     <div className="App">
-      <ClickCounter />
-      <HoverCounter name='varuna'/>
+      <CounterTwo render={(count, incrementCount) => (<ClickCounterTwo count={count} incrementCount={incrementCount} />
+      )}
+      />
+      <CounterTwo render={(count, incrementCount) => (<HoverCounterTwo count={count} incrementCount={incrementCount} />
+      )}
+      />
+      {/*<ClickCounterTwo />
+      <HoverCounterTwo />
+  <User render={(isLoggedIn) => isLoggedIn ? 'varuna' : 'guest'}/>*/}
+      {/*<ClickCounter />
+      <HoverCounter name='varuna'/>*/}
       {/*<ErrorBoundary>
         <StudentList sName='varuna' />
       </ErrorBoundary>
