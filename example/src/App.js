@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import './App.css';
-import PostForm from './Components/PostForm';
+//import React, { Component } from 'react';
+//import './App.css';
+//import PostForm from './Components/PostForm';
 //import ListPosts from './Components/ListPosts';
 //import ComponentW from './Components/ComponentW';
 //import { UserProvider } from './Components/userContext';
@@ -37,7 +37,7 @@ class App extends Component {
 render() {
   return (
     <div className="App">
-      <PostForm />
+      {/*<PostForm />*/}
       {/*<ListPosts />*/}
       {/*<UserProvider value="varuna">
         <ComponentW />

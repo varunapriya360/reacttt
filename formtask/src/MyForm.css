@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(156, 180, 51);
+  }
+  
+
+  input, textarea {
+    border: 1px solid #0a0a23;
+    font-family: sans-serif;
+    color: black;
+  }
+
+  label {
+    margin: 1.5rem 0;
+    justify-content: space-around;
+  }
+
+  .confirmation-popup {
+    background-color: brown;
+    border-color: black;
+  }
+
+  .final {
+    background-color: rgb(12, 52, 12);
+    color: black;
+  }
+  
+  
+  
+  
+  
