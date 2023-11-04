@@ -92,7 +92,7 @@ class App extends Component {
             <input type="text" id="registrationNumber" name="registrationNumber" value={registrationNumber} onChange={this.handleInputChange} required />
             </div>
           </div>
-
+        
           <div className="font-bold font-custom" >
             <label>Gender: </label>
             <label className="font-custom">
