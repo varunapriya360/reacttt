@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
 
-function Questions() {
+function Questions({ onAnswerChange }) {
   return (
     <div className="font-bold font-custom">
-      <Question question="How would you describe the practical exposure given on subject topics?" />
-      <Question question="How would you describe the regularity of your deparment staffs?" />
-      <Question question="How good are the teaching methods/lab facilities given to you? " />
+      <Question question="How would you describe the practical exposure given on subject topics?"  onAnswerChange={onAnswerChange} />
+      <Question question="How would you describe the regularity of your deparment staffs?"  onAnswerChange={onAnswerChange} />
+      <Question question="How good are the teaching methods/lab facilities given to you? "  onAnswerChange={onAnswerChange} />
     </div>
   );
 }
 
-function Question({ question }) {
+function Question({ question, onAnswerChange }) {
   const [answer, setAnswer] = useState('');
 
   const handleAnswerChange = (event) => {
     setAnswer(event.target.value);
+    onAnswerChange(question, event.target.value);
   };
 
   return (

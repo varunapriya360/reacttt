@@ -27,15 +27,16 @@ class ClgDept extends Component {
 
   handleCollegeChange = (e) => {
     const selectedCollege = e.target.value;
-    this.setState({
-      selectedCollege: selectedCollege,
-      selectedDepartment: ''
-    });
+    this.setState({ selectedCollege });
+    this.props.onCollegeChange(selectedCollege); 
   }
 
   handleDepartmentChange = (e) => {
-    this.setState({ selectedDepartment: e.target.value });
+    const selectedDepartment = e.target.value;
+    this.setState({ selectedDepartment });
+    this.props.onDepartmentChange(selectedDepartment); 
   }
+
 
   render() {
     const { colleges, selectedCollege, selectedDepartment} = this.state;

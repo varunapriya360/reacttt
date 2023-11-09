@@ -16,6 +16,9 @@ class App extends Component {
       gender: '',
       comment: '',
       submittedData: null,
+      selectedCollege: '',
+      selectedDepartment: '',
+      selectedAnswers: {},
       showConfirmation: false,
     };
   }
@@ -23,6 +26,23 @@ class App extends Component {
   handleInputChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   }
+   
+  handleCollegeChange = (selectedCollege) => {
+    this.setState({ selectedCollege });
+  }
+
+  handleDepartmentChange = (selectedDepartment) => {
+    this.setState({ selectedDepartment });
+  }
+
+  handleAnswerChange = (question, answer) => {
+    this.setState((prevState) => ({
+      selectedAnswers: {
+        ...prevState.selectedAnswers,
+        [question]: answer,
+      },
+    }));
+  };
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -42,6 +62,9 @@ class App extends Component {
       phoneNumber,
       registrationNumber,
       gender,
+      selectedCollege,
+      selectedDepartment,
+      selectedAnswers,
       comment,
       showConfirmation,
       submittedData,
@@ -108,11 +131,17 @@ class App extends Component {
               Non-binary
             </label>
           </div>
-         
-         <ClgDept />
 
 
-         <Questions />
+  
+          <ClgDept
+            onCollegeChange={this.handleCollegeChange}
+            onDepartmentChange={this.handleDepartmentChange}
+          />
+
+
+           <Questions onAnswerChange={this.handleAnswerChange} />
+
 
           <div>
             <label className="font-bold font-custom" htmlFor="comment">Comment: </label>
@@ -134,6 +163,15 @@ class App extends Component {
             <p>Phone Number: {phoneNumber}</p>
             <p>Registration Number: {registrationNumber}</p>
             <p>Gender: {gender}</p>
+            <p>College: {selectedCollege}</p>
+            <p>Department: {selectedDepartment}</p>
+            
+            {Object.entries(selectedAnswers).map(([question, answer]) => (
+      <p key={question}>
+        {question}: {answer}
+      </p>
+    ))}
+
             <p>Comment: {comment}</p>
             <button onClick={this.confirmSubmission} className="text-lg text-black font-bold py-2 px-7 hover:bg-green-500 font-custom">
               Confirm</button>
